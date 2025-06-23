@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>{{ 'Edit' if employee else 'Add' }} Employee</h2>
+    <form method="POST">
+        Name: <input type="text" name="name" value="{{ employee.name if employee else '' }}"><br>
+        Email: <input type="email" name="email" value="{{ employee.email if employee else '' }}"><br>
+        Department: <input type="text" name="department" value="{{ employee.department if employee else '' }}"><br>
+        Position: <input type="text" name="position" value="{{ employee.position if employee else '' }}"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
