@@ -1,0 +1,12 @@
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }} {{ form.username() }}<br>
+            {{ form.password.label }} {{ form.password() }}<br>
+            {{ form.submit() }}
+        </form>
+    </div>
+</body>
